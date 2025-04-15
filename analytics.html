@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analytics - Wattwise</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="analytics-animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -42,66 +43,156 @@
         </section>
 
         <section class="analytics-grid">
-            <div class="analytics-card large">
+            <div class="analytics-card large" data-aos="fade-up">
                 <h2>Energy Consumption</h2>
                 <div class="chart-container">
-                    <div class="chart">
-                        <div class="chart-bar" style="height: 60%">
-                            <span class="chart-label">Mon</span>
+                    <svg class="bar-chart" viewBox="0 0 300 200" preserveAspectRatio="none">
+                        <!-- Grid lines -->
+                        <g class="grid-lines">
+                            <line x1="0" y1="0" x2="300" y2="0" />
+                            <line x1="0" y1="50" x2="300" y2="50" />
+                            <line x1="0" y1="100" x2="300" y2="100" />
+                            <line x1="0" y1="150" x2="300" y2="150" />
+                            <line x1="0" y1="200" x2="300" y2="200" />
+                        </g>
+                        <!-- Bars -->
+                        <g class="bars">
+                            <rect class="bar" x="20" y="80" width="25" height="120" data-value="60" />
+                            <rect class="bar" x="60" y="40" width="25" height="160" data-value="80" />
+                            <rect class="bar" x="100" y="120" width="25" height="80" data-value="40" />
+                            <rect class="bar" x="140" y="60" width="25" height="140" data-value="70" />
+                            <rect class="bar" x="180" y="20" width="25" height="180" data-value="90" />
+                            <rect class="bar" x="220" y="100" width="25" height="100" data-value="50" />
+                            <rect class="bar" x="260" y="140" width="25" height="60" data-value="30" />
+                        </g>
+                        <!-- Labels -->
+                        <g class="bar-labels" fill="rgba(255, 255, 255, 0.8)">
+                            <text x="32.5" y="190" text-anchor="middle">Mon</text>
+                            <text x="72.5" y="190" text-anchor="middle">Tue</text>
+                            <text x="112.5" y="190" text-anchor="middle">Wed</text>
+                            <text x="152.5" y="190" text-anchor="middle">Thu</text>
+                            <text x="192.5" y="190" text-anchor="middle">Fri</text>
+                            <text x="232.5" y="190" text-anchor="middle">Sat</text>
+                            <text x="272.5" y="190" text-anchor="middle">Sun</text>
+                        </g>
+                    </svg>
+                    <div class="y-axis-labels">
+                        <span>100%</span>
+                        <span>75%</span>
+                        <span>50%</span>
+                        <span>25%</span>
+                        <span>0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analytics-card" data-aos="fade-up" data-aos-delay="100">
+                <h2>Weekly Energy Usage Patterns</h2>
+                <div class="heatmap-container">
+                    <div class="heatmap-legend">
+                        <span>Low</span>
+                        <div class="legend-gradient"></div>
+                        <span>High</span>
+                    </div>
+                    <div class="heatmap-grid">
+                        <!-- Time labels -->
+                        <div class="time-labels">
+                            <span>12 AM</span>
+                            <span>4 AM</span>
+                            <span>8 AM</span>
+                            <span>12 PM</span>
+                            <span>4 PM</span>
+                            <span>8 PM</span>
                         </div>
-                        <div class="chart-bar" style="height: 80%">
-                            <span class="chart-label">Tue</span>
+                        <!-- Days labels -->
+                        <div class="day-labels">
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                            <span>Sun</span>
                         </div>
-                        <div class="chart-bar" style="height: 40%">
-                            <span class="chart-label">Wed</span>
+                        <!-- Heatmap cells -->
+                        <div class="heatmap">
+                            <!-- Row 1 -->
+                            <div class="heatmap-cell" data-value="30"></div>
+                            <div class="heatmap-cell" data-value="20"></div>
+                            <div class="heatmap-cell" data-value="15"></div>
+                            <div class="heatmap-cell" data-value="40"></div>
+                            <div class="heatmap-cell" data-value="65"></div>
+                            <div class="heatmap-cell" data-value="35"></div>
+                            <!-- Row 2 -->
+                            <div class="heatmap-cell" data-value="25"></div>
+                            <div class="heatmap-cell" data-value="45"></div>
+                            <div class="heatmap-cell" data-value="55"></div>
+                            <div class="heatmap-cell" data-value="85"></div>
+                            <div class="heatmap-cell" data-value="90"></div>
+                            <div class="heatmap-cell" data-value="75"></div>
+                            <!-- Row 3 -->
+                            <div class="heatmap-cell" data-value="35"></div>
+                            <div class="heatmap-cell" data-value="65"></div>
+                            <div class="heatmap-cell" data-value="80"></div>
+                            <div class="heatmap-cell" data-value="95"></div>
+                            <div class="heatmap-cell" data-value="85"></div>
+                            <div class="heatmap-cell" data-value="60"></div>
+                            <!-- Row 4 -->
+                            <div class="heatmap-cell" data-value="40"></div>
+                            <div class="heatmap-cell" data-value="70"></div>
+                            <div class="heatmap-cell" data-value="75"></div>
+                            <div class="heatmap-cell" data-value="90"></div>
+                            <div class="heatmap-cell" data-value="80"></div>
+                            <div class="heatmap-cell" data-value="55"></div>
+                            <!-- Row 5 -->
+                            <div class="heatmap-cell" data-value="45"></div>
+                            <div class="heatmap-cell" data-value="60"></div>
+                            <div class="heatmap-cell" data-value="70"></div>
+                            <div class="heatmap-cell" data-value="85"></div>
+                            <div class="heatmap-cell" data-value="75"></div>
+                            <div class="heatmap-cell" data-value="50"></div>
+                            <!-- Row 6 -->
+                            <div class="heatmap-cell" data-value="30"></div>
+                            <div class="heatmap-cell" data-value="40"></div>
+                            <div class="heatmap-cell" data-value="45"></div>
+                            <div class="heatmap-cell" data-value="55"></div>
+                            <div class="heatmap-cell" data-value="50"></div>
+                            <div class="heatmap-cell" data-value="35"></div>
+                            <!-- Row 7 -->
+                            <div class="heatmap-cell" data-value="20"></div>
+                            <div class="heatmap-cell" data-value="25"></div>
+                            <div class="heatmap-cell" data-value="30"></div>
+                            <div class="heatmap-cell" data-value="35"></div>
+                            <div class="heatmap-cell" data-value="30"></div>
+                            <div class="heatmap-cell" data-value="25"></div>
                         </div>
-                        <div class="chart-bar" style="height: 70%">
-                            <span class="chart-label">Thu</span>
-                        </div>
-                        <div class="chart-bar" style="height: 90%">
-                            <span class="chart-label">Fri</span>
-                        </div>
-                        <div class="chart-bar" style="height: 50%">
-                            <span class="chart-label">Sat</span>
-                        </div>
-                        <div class="chart-bar" style="height: 30%">
-                            <span class="chart-label">Sun</span>
+                    </div>
+                    <div class="heatmap-info">
+                        <p>Hover over cells to see detailed usage data</p>
+                        <div class="heatmap-tooltip" style="display: none;">
+                            <span class="tooltip-time"></span>
+                            <span class="tooltip-value"></span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="analytics-card">
-                <h2>Energy Sources</h2>
-                <div class="pie-chart">
-                    <div class="pie-segment" style="--offset: 0; --value: 0.6">
-                        <span class="pie-label">Solar</span>
-                    </div>
-                    <div class="pie-segment" style="--offset: 0.6; --value: 0.25">
-                        <span class="pie-label">Wind</span>
-                    </div>
-                    <div class="pie-segment" style="--offset: 0.85; --value: 0.15">
-                        <span class="pie-label">Grid</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="analytics-card">
+            <div class="analytics-card" data-aos="fade-up" data-aos-delay="200">
                 <h2>Peak Hours</h2>
                 <div class="peak-hours">
-                    <div class="peak-hour">
+                    <div class="peak-hour" data-time="8:00 AM" data-usage="80">
                         <span class="hour">8:00 AM</span>
                         <div class="peak-bar">
                             <div class="peak-fill" style="width: 80%"></div>
                         </div>
                     </div>
-                    <div class="peak-hour">
+                    <div class="peak-hour" data-time="12:00 PM" data-usage="95">
                         <span class="hour">12:00 PM</span>
                         <div class="peak-bar">
                             <div class="peak-fill" style="width: 95%"></div>
                         </div>
                     </div>
-                    <div class="peak-hour">
+                    <div class="peak-hour" data-time="6:00 PM" data-usage="70">
                         <span class="hour">6:00 PM</span>
                         <div class="peak-bar">
                             <div class="peak-fill" style="width: 70%"></div>
@@ -110,12 +201,12 @@
                 </div>
             </div>
 
-            <div class="analytics-card">
+            <div class="analytics-card" data-aos="fade-up" data-aos-delay="300">
                 <h2>Cost Savings</h2>
                 <div class="savings-stats">
                     <div class="savings-item">
                         <span class="savings-label">This Month</span>
-                        <span class="savings-value">$245.67</span>
+                        <span class="savings-value highlight">$245.67</span>
                     </div>
                     <div class="savings-item">
                         <span class="savings-label">This Year</span>
@@ -129,20 +220,100 @@
             </div>
         </section>
 
-        <section class="analytics-trends">
+        <section class="analytics-trends" data-aos="fade-up" data-aos-delay="400">
             <h2>Environmental Impact Trends</h2>
             <div class="trends-container">
                 <div class="trend-card">
                     <h3>Carbon Footprint</h3>
                     <div class="trend-chart">
-                        <div class="trend-line" style="--points: 0,30,50,70,90,100,95,85,75,65,55,45"></div>
+                        <svg class="line-chart" viewBox="0 0 300 200" preserveAspectRatio="none">
+                            <!-- Grid lines -->
+                            <g class="grid-lines">
+                                <line x1="0" y1="0" x2="300" y2="0" />
+                                <line x1="0" y1="50" x2="300" y2="50" />
+                                <line x1="0" y1="100" x2="300" y2="100" />
+                                <line x1="0" y1="150" x2="300" y2="150" />
+                                <line x1="0" y1="200" x2="300" y2="200" />
+                            </g>
+                            <!-- Data points for Carbon Footprint -->
+                            <path class="line-path" d="M0,200 L25,140 L50,100 L75,70 L100,50 L125,30 L150,35 L175,45 L200,55 L225,65 L250,75 L275,85 L300,110" />
+                            <g class="data-points">
+                                <circle cx="0" cy="200" r="4" />
+                                <circle cx="25" cy="140" r="4" />
+                                <circle cx="50" cy="100" r="4" />
+                                <circle cx="75" cy="70" r="4" />
+                                <circle cx="100" cy="50" r="4" />
+                                <circle cx="125" cy="30" r="4" />
+                                <circle cx="150" cy="35" r="4" />
+                                <circle cx="175" cy="45" r="4" />
+                                <circle cx="200" cy="55" r="4" />
+                                <circle cx="225" cy="65" r="4" />
+                                <circle cx="250" cy="75" r="4" />
+                                <circle cx="275" cy="85" r="4" />
+                                <circle cx="300" cy="110" r="4" />
+                            </g>
+                        </svg>
+                        <div class="chart-labels">
+                            <span>Jan</span>
+                            <span>Mar</span>
+                            <span>Jun</span>
+                            <span>Sep</span>
+                            <span>Dec</span>
+                        </div>
+                        <div class="y-axis-labels">
+                            <span>100%</span>
+                            <span>75%</span>
+                            <span>50%</span>
+                            <span>25%</span>
+                            <span>0%</span>
+                        </div>
                     </div>
                     <p class="trend-description">Reduced by 45% over the past year</p>
                 </div>
                 <div class="trend-card">
                     <h3>Energy Efficiency</h3>
                     <div class="trend-chart">
-                        <div class="trend-line" style="--points: 20,35,50,65,80,90,95,98,100,100,100,100"></div>
+                        <svg class="line-chart" viewBox="0 0 300 200" preserveAspectRatio="none">
+                            <!-- Grid lines -->
+                            <g class="grid-lines">
+                                <line x1="0" y1="0" x2="300" y2="0" />
+                                <line x1="0" y1="50" x2="300" y2="50" />
+                                <line x1="0" y1="100" x2="300" y2="100" />
+                                <line x1="0" y1="150" x2="300" y2="150" />
+                                <line x1="0" y1="200" x2="300" y2="200" />
+                            </g>
+                            <!-- Data points for Energy Efficiency -->
+                            <path class="line-path" d="M0,180 L25,165 L50,150 L75,135 L100,120 L125,90 L150,70 L175,50 L200,30 L225,20 L250,10 L275,5 L300,0" />
+                            <g class="data-points">
+                                <circle cx="0" cy="180" r="4" />
+                                <circle cx="25" cy="165" r="4" />
+                                <circle cx="50" cy="150" r="4" />
+                                <circle cx="75" cy="135" r="4" />
+                                <circle cx="100" cy="120" r="4" />
+                                <circle cx="125" cy="90" r="4" />
+                                <circle cx="150" cy="70" r="4" />
+                                <circle cx="175" cy="50" r="4" />
+                                <circle cx="200" cy="30" r="4" />
+                                <circle cx="225" cy="20" r="4" />
+                                <circle cx="250" cy="10" r="4" />
+                                <circle cx="275" cy="5" r="4" />
+                                <circle cx="300" cy="0" r="4" />
+                            </g>
+                        </svg>
+                        <div class="chart-labels">
+                            <span>Jan</span>
+                            <span>Mar</span>
+                            <span>Jun</span>
+                            <span>Sep</span>
+                            <span>Dec</span>
+                        </div>
+                        <div class="y-axis-labels">
+                            <span>100%</span>
+                            <span>75%</span>
+                            <span>50%</span>
+                            <span>25%</span>
+                            <span>0%</span>
+                        </div>
                     </div>
                     <p class="trend-description">Improved by 80% since implementation</p>
                 </div>
@@ -182,6 +353,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="analytics.js"></script>
 </body>
 
 </html>

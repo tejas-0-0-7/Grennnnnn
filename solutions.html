@@ -39,107 +39,179 @@
     </header>
 
     <main class="solutions-main">
+        <!-- Add hidden message container -->
+        <div class="hidden-message" id="hiddenMessage">
+            <div class="message-content">
+                <i class="fas fa-lightbulb message-icon"></i>
+                <p class="message-text"></p>
+                <button class="message-close"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+
         <section class="solutions-hero">
-            <h1>Energy Solutions</h1>
-            <p>Discover sustainable energy solutions tailored to your needs</p>
+            <div class="hero-content">
+                <h1>Smart Energy Solutions</h1>
+                <p>Transform your energy consumption with our cutting-edge solutions</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">85%</span>
+                        <span class="stat-label">Energy Savings</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Monitoring</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Happy Users</span>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-        <section class="solutions-grid">
-            <div class="solution-card">
-                <div class="solution-icon">
-                    <i class="fas fa-solar-panel"></i>
+        <section class="solutions-showcase">
+            <div class="showcase-grid">
+                <div class="showcase-card main-card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <h2>Solar Solutions</h2>
+                        <p>Next-generation solar technology for maximum efficiency</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> High-efficiency panels</li>
+                            <li><i class="fas fa-check"></i> Smart monitoring</li>
+                            <li><i class="fas fa-check"></i> Battery integration</li>
+                            <li><i class="fas fa-check"></i> Mobile control</li>
+                        </ul>
+                        <button class="explore-btn" data-message="🌟 Our solar solutions can save you up to $1,200 annually on energy costs!">
+                            Explore Solar <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="card-visual">
+                        <div class="efficiency-meter">
+                            <div class="meter-circle">
+                                <svg viewBox="0 0 100 100">
+                                    <circle class="meter-bg" cx="50" cy="50" r="45"/>
+                                    <circle class="meter-fill" cx="50" cy="50" r="45"/>
+                                </svg>
+                                <div class="meter-value">95%</div>
+                            </div>
+                            <span class="meter-label">Efficiency</span>
+                        </div>
+                    </div>
                 </div>
-                <h2>Solar Power</h2>
-                <p>Harness the power of the sun with our advanced solar panel systems. Reduce your carbon footprint and
-                    energy costs.</p>
-                <ul class="solution-features">
-                    <li>High-efficiency panels</li>
-                    <li>Smart monitoring system</li>
-                    <li>Battery storage options</li>
-                    <li>Grid integration</li>
-                </ul>
-                <button class="solution-button">Learn More</button>
-            </div>
 
-            <div class="solution-card">
-                <div class="solution-icon">
-                    <i class="fas fa-wind"></i>
+                <div class="showcase-card">
+                    <div class="card-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h2>Wind Energy</h2>
+                    <p>Harness wind power with our advanced turbine systems</p>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="value">3.5kW</span>
+                            <span class="label">Average Output</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="value">15yr</span>
+                            <span class="label">Lifespan</span>
+                        </div>
+                    </div>
+                    <button class="explore-btn" data-message="💨 Our wind turbines operate at just 35dB - quieter than a whisper!" style="margin: 20px;">
+                        Learn More
+                    </button>
                 </div>
-                <h2>Wind Energy</h2>
-                <p>Generate clean energy with our innovative wind turbine solutions. Perfect for both residential and
-                    commercial use.</p>
-                <ul class="solution-features">
-                    <li>Vertical axis turbines</li>
-                    <li>Low noise operation</li>
-                    <li>Smart grid integration</li>
-                    <li>Remote monitoring</li>
-                </ul>
-                <button class="solution-button">Learn More</button>
-            </div>
 
-            <div class="solution-card">
-                <div class="solution-icon">
-                    <i class="fas fa-battery-full"></i>
+                <div class="showcase-card">
+                    <div class="card-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h2>Smart Home</h2>
+                    <p>Intelligent automation for optimal energy usage</p>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-thermometer-half"></i>
+                            <span>Climate</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Lighting</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-plug"></i>
+                            <span>Appliances</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                    <button class="explore-btn" data-message="🏠 Smart homes reduce energy usage by up to 30% automatically!" style="margin: 20px;">
+                        Discover
+                    </button>
                 </div>
-                <h2>Energy Storage</h2>
-                <p>Store excess energy efficiently with our cutting-edge battery systems. Ensure power availability when
-                    you need it most.</p>
-                <ul class="solution-features">
-                    <li>Lithium-ion technology</li>
-                    <li>Smart charging</li>
-                    <li>Backup power</li>
-                    <li>Load management</li>
-                </ul>
-                <button class="solution-button">Learn More</button>
-            </div>
-
-            <div class="solution-card">
-                <div class="solution-icon">
-                    <i class="fas fa-home"></i>
-                </div>
-                <h2>Smart Home</h2>
-                <p>Transform your home into an energy-efficient smart space with our integrated automation solutions.
-                </p>
-                <ul class="solution-features">
-                    <li>Smart thermostats</li>
-                    <li>Energy monitoring</li>
-                    <li>Automated lighting</li>
-                    <li>App control</li>
-                </ul>
-                <button class="solution-button">Learn More</button>
             </div>
         </section>
 
-        <section class="solutions-benefits">
-            <h2>Why Choose Our Solutions?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Cost Effective</h3>
-                    <p>Reduce your energy bills by up to 80% with our efficient solutions.</p>
+        <section class="solutions-features">
+            <h2>Why Choose Wattwise?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-time Monitoring</h3>
+                    <p>Track your energy usage and savings in real-time with our advanced monitoring system.</p>
                 </div>
-                <div class="benefit-card">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Environmentally Friendly</h3>
-                    <p>Significantly reduce your carbon footprint and environmental impact.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Reliable & Secure</h3>
+                    <p>Enterprise-grade security and reliability for your peace of mind.</p>
                 </div>
-                <div class="benefit-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Reliable</h3>
-                    <p>Proven technology with 24/7 monitoring and support.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-friendly</h3>
+                    <p>Reduce your carbon footprint while saving on energy costs.</p>
                 </div>
-                <div class="benefit-card">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Customizable</h3>
-                    <p>Solutions tailored to your specific needs and requirements.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Expert support team available around the clock to assist you.</p>
                 </div>
             </div>
         </section>
 
         <section class="solutions-cta">
-            <h2>Ready to Make the Switch?</h2>
-            <p>Get a free consultation and personalized energy solution plan</p>
-            <button class="cta-button">Schedule Consultation</button>
+            <div class="cta-content">
+                <h2>Ready to Transform Your Energy Usage?</h2>
+                <p>Schedule a free consultation with our energy experts</p>
+                <form class="consultation-form" id="consultationForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="cta-button" data-message="📧 Thank you! Our team will contact you within 24 hours.">Get Started</button>
+                </form>
+                <div class="cta-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Free consultation</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Custom solution design</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>ROI calculation</span>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -176,6 +248,64 @@
             <p>"The greatest threat to our planet is the belief that someone else will save it." - Robert Swan</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hiddenMessage = document.getElementById('hiddenMessage');
+            const messageText = document.querySelector('.message-text');
+            const messageClose = document.querySelector('.message-close');
+            const buttons = document.querySelectorAll('button[data-message]');
+            const form = document.getElementById('consultationForm');
+
+            // Function to show message
+            function showMessage(message) {
+                messageText.textContent = message;
+                hiddenMessage.classList.add('show');
+                setTimeout(() => {
+                    hiddenMessage.classList.add('fade-in');
+                }, 10);
+            }
+
+            // Hide message
+            messageClose.addEventListener('click', () => {
+                hiddenMessage.classList.remove('fade-in');
+                setTimeout(() => {
+                    hiddenMessage.classList.remove('show');
+                }, 300);
+            });
+
+            // Add click handlers to all buttons with data-message
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    showMessage(button.dataset.message);
+                });
+            });
+
+            // Form submission
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const button = form.querySelector('button[data-message]');
+                showMessage(button.dataset.message);
+                form.reset();
+            });
+
+            // Easter egg: Konami code
+            let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+            let konamiIndex = 0;
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === konamiCode[konamiIndex]) {
+                    konamiIndex++;
+                    if (konamiIndex === konamiCode.length) {
+                        showMessage('🎮 You found the secret! Here\'s 20% off your first installation!');
+                        konamiIndex = 0;
+                    }
+                } else {
+                    konamiIndex = 0;
+                }
+            });
+        });
+    </script>
 </body>
 
 <script src="theme.js"></script>

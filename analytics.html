@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics - Wattwise</title>
+    <title>Wattwise - Analytics</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="analytics-animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,21 @@
             <div class="nav-brand">
                 <a href="index.html">Wattwise</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="analytics.html" class="active">Analytics</a></li>
-                <li><a href="solutions.html">Solutions</a></li>
-                <li><a href="community.html">Community</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="analytics.html" class="active">Analytics</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" class="toggle-button">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -232,7 +239,8 @@
                                 <line x1="0" y1="200" x2="300" y2="200" />
                             </g>
                             <!-- Data points for Carbon Footprint -->
-                            <path class="line-path" d="M0,200 L25,140 L50,100 L75,70 L100,50 L125,30 L150,35 L175,45 L200,55 L225,65 L250,75 L275,85 L300,110" />
+                            <path class="line-path"
+                                d="M0,200 L25,140 L50,100 L75,70 L100,50 L125,30 L150,35 L175,45 L200,55 L225,65 L250,75 L275,85 L300,110" />
                             <g class="data-points">
                                 <circle cx="0" cy="200" r="4" />
                                 <circle cx="25" cy="140" r="4" />
@@ -279,7 +287,8 @@
                                 <line x1="0" y1="200" x2="300" y2="200" />
                             </g>
                             <!-- Data points for Energy Efficiency -->
-                            <path class="line-path" d="M0,180 L25,165 L50,150 L75,135 L100,120 L125,90 L150,70 L175,50 L200,30 L225,20 L250,10 L275,5 L300,0" />
+                            <path class="line-path"
+                                d="M0,180 L25,165 L50,150 L75,135 L100,120 L125,90 L150,70 L175,50 L200,30 L225,20 L250,10 L275,5 L300,0" />
                             <g class="data-points">
                                 <circle cx="0" cy="180" r="4" />
                                 <circle cx="25" cy="165" r="4" />
@@ -352,6 +361,7 @@
     </footer>
 
     <script src="analytics.js"></script>
+    <script src="theme.js"></script>
 </body>
 
 </html>
